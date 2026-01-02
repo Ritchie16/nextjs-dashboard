@@ -1,4 +1,4 @@
-import { lusitana } from "../ui/fonts";
+import { lusitana } from "../../ui/fonts";
 import RevenueChart from '@/app/ui/dashboard/revenue-chart';
 import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 import {Card} from '@/app/ui/dashboard/cards';
