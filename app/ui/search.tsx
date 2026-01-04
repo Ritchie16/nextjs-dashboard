@@ -4,10 +4,17 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { useSearchParams } from 'next/navigation';
 
 export default function Search({ placeholder }: { placeholder: string }) {
+  //gives current URL query parameters that cannot be modified using set
   const searchParams = useSearchParams();
   
+  
   function handleSearch(term : string){
-    console.log(term);
+    //URLSearchParams is a Web API that provides utility methods for manipulitating the url parameters
+    //feeds the parameters from searchParams
+    const params = new URLSearchParams(searchParams);
+
+    //update the url if defined
+    term ? params.set('query', term) : params.delete('query');
   }
 
   return (
