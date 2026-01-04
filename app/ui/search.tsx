@@ -20,7 +20,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
     term ? params.set('query', term) : params.delete('query');
 
     //update the url with user search without refreshing
-    replace(`${pathname}?${params}.toString`);
+    replace(`${pathname}?${params.toString()}`);
   }
 
   return (
