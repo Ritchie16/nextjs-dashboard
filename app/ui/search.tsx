@@ -8,7 +8,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   
   function handleSearch(term : string){
     console.log(term);
-    
+  }
 
   return (
     <div className="relative flex flex-1 flex-shrink-0">
