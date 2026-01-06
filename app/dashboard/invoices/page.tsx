@@ -28,6 +28,7 @@ export default async function Page(props : {
         <Search placeholder="Search invoices..." />
         <CreateInvoice />
       </div>
+      {/**without key when search query or currentPage changes fallback doesn't get shown */}
        <Suspense key={query + currentPage} fallback={<InvoicesTableSkeleton />}>
         <Table query={query} currentPage={currentPage} />
       </Suspense>
