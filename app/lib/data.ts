@@ -113,6 +113,7 @@ export async function fetchFilteredInvoices(
       ORDER BY invoices.date DESC
       LIMIT ${ITEMS_PER_PAGE} OFFSET ${offset}
     `;
+    //offset skips n rows
 
     return invoices;
   } catch (error) {
